@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<hr>
+
+     {% if request.user.is_authenticated %}
+    <h4>
+    {{ user.username | upper }}, bienvenido 🫦
+    </h4>
+    {% else %}
+        <h4>No estás logeado</h4>
+    {% endif %}
+{% endblock %}
+
+
+
